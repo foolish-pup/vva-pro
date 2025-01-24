@@ -1,18 +1,18 @@
 /*
- Navicat Premium Dump SQL
+ Navicat Premium Data Transfer
 
- Source Server         : postgreSQL
+ Source Server         : postgres
  Source Server Type    : PostgreSQL
- Source Server Version : 160003 (160003)
+ Source Server Version : 170002
  Source Host           : localhost:5432
- Source Catalog        : vva-pro
+ Source Catalog        : vva-api
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 160003 (160003)
+ Target Server Version : 170002
  File Encoding         : 65001
 
- Date: 31/10/2024 10:17:30
+ Date: 24/01/2025 16:16:21
 */
 
 
@@ -56,7 +56,7 @@ INSERT INTO "public"."User" VALUES ('ea35984a-34f6-4da3-9f50-314f4b719ea6', 'may
 INSERT INTO "public"."User" VALUES ('b485e3c1-0790-4007-adef-849537c291f5', 'leijun', '$2b$10$7Ywy/tKMzLmiWUEuXD4wG.Otq9VycEJcPtcGOEcKlt28jbo2k4.pO', '雷军', 'leijun@xiaomi.com', '18888888883', 'http://localhost:3000/static/image/2024-09/fcdab14e-29d4-43e3-8630-9cf064646f35.jpeg', 'MALE', 'ACTIVE', 1, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxlaWp1biIsInN1YiI6ImI0ODVlM2MxLTA3OTAtNDAwNy1hZGVmLTg0OTUzN2MyOTFmNSIsImlhdCI6MTcyNTk1OTE0MiwiZXhwIjoxNzI2MjE4MzQyfQ.r8wqW1bGycJ2FrNdu8rdbOmsw6PWPkBkdexvpzPkH7w', '{"Are You OK",小米SU7}', '{11,1101,110105}', '小米总部', '6db049fe-c944-4680-b6dc-f9f40d6ad018', '68c4ac85-3f4a-4ca0-9112-562e91a1d6a2', '42fa3681-de70-4d5f-95b8-db5a66101ecc', 5, '::1', '2024-09-10 09:05:42.137', '2024-09-04 05:44:44.16', '2024-09-10 09:05:42.138');
 INSERT INTO "public"."User" VALUES ('1785737b-8daf-4bc1-ae49-8769c256c209', 'lizhien', '$2b$10$HZUnnFSlz5E3N.DkLBQWu.AeyAOTvAayS6C.6osxcCTjYSm6zPt.6', '李知恩', 'lizhien@me.com', '13800138000', 'http://localhost:3000/static/image/2024-07/6f6e22a3-1e6a-4aa3-bbe9-6b2b0e6ea5aa.jpeg', 'FEMALE', 'INACTIVE', 1, NULL, '{美女}', '{11,1101,110101}', '首尔区', '2564f9b6-9288-49d4-b1b2-2d6f4f7946f3', '2eaab2c3-4872-49af-b647-78ba9c120df8', 'f401a468-5a9f-4430-85a2-d31177df034a', 2, '::1', '2024-08-23 03:36:37.955', '2024-07-30 06:38:44.512', '2024-08-23 03:36:54.871');
 INSERT INTO "public"."User" VALUES ('bf9c32dc-2363-4a31-9e7f-74544f7d04a4', 'zhangruonan', '$2b$10$LH1qhhLPxCIXMETxYqHDtek05qUAtMP9fQvZf6xJ23dPtG5JHx50G', '章若楠', 'zyn@yule.com', '18888888884', 'http://localhost:3000/static/image/2024-09/72840555-ee20-4679-a54d-4b39c622567d.jpeg', 'FEMALE', 'ACTIVE', 1, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InpoYW5ncnVvbmFuIiwic3ViIjoiYmY5YzMyZGMtMjM2My00YTMxLTllN2YtNzQ1NDRmN2QwNGE0IiwiaWF0IjoxNzI1OTU4MTQwLCJleHAiOjE3MjYyMTczNDB9.v2COO1RKNHMkNAyJ-nH5OyoooIN8JCcvXXmBeSN5kbI', '{女神}', '{13,1303,130303}', '别墅967号', 'e02b5eec-d7b9-4ff8-862c-0151448a390c', 'b924df00-77ed-49b7-a8b4-181f0b259c18', 'f401a468-5a9f-4430-85a2-d31177df034a', 9, '::1', '2024-09-10 08:49:00.671', '2024-09-04 05:46:47.509', '2024-09-10 08:49:00.674');
-INSERT INTO "public"."User" VALUES ('dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', 'Admin', '$2b$10$lfMvyYSrWNjVF55UhxeC0uoVYgf7GwWBhXu1BZAlvHXoGf./E7Lk2', 'pup', 'pup@foxmail.com', '15920157932', 'http://localhost:3000/static/image/2024-07/cc9e77ee-cf84-48e8-a9d0-dc3e9d21224c.jpeg', 'MALE', 'ACTIVE', 88, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFkbWluIiwic3ViIjoiZGRkZDdiYTktYzFkNC00YTZiLWI5NDYtZjA1ZTJmNzk4ODBmIiwiaWF0IjoxNzMwMzQwNzQ0LCJleHAiOjE3MzA1OTk5NDR9.T9cdDxVEBGYKs25z68DQZ5cUGTWoKuqkII9Dpau0-k8', '{热血青年,佛系,追求自由,做自己喜欢做的事}', '{44,4403,440305}', '粤海街道', '6db049fe-c944-4680-b6dc-f9f40d6ad018', '32cab8f0-13df-4876-83c5-86089390dbb7', '34f2d5e1-7378-46b3-8f0c-56cfdbb8f3eb', 216, '::1', '2024-10-31 02:12:24.833', '2024-07-30 02:35:25.835', '2024-10-31 02:12:24.835');
+INSERT INTO "public"."User" VALUES ('dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', 'Admin', '$2b$10$lfMvyYSrWNjVF55UhxeC0uoVYgf7GwWBhXu1BZAlvHXoGf./E7Lk2', '狗子', 'superpupz@163.com', '18819990508', 'http://localhost:3000/static/image/2025-01/6353634b-1794-4a4d-a1c8-f23f0296741c.png', 'MALE', 'ACTIVE', 88, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFkbWluIiwic3ViIjoiZGRkZDdiYTktYzFkNC00YTZiLWI5NDYtZjA1ZTJmNzk4ODBmIiwiaWF0IjoxNzM3NzAyODI5LCJleHAiOjE3Mzc5NjIwMjl9.j82_exyD5SblXDuUsBagvx3RmLlhW2_j38ZGaol9EQg', '{热血青年,佛系,追求自由,做自己喜欢做的事}', '{11,1101,110105}', '望京', '6db049fe-c944-4680-b6dc-f9f40d6ad018', '32cab8f0-13df-4876-83c5-86089390dbb7', '34f2d5e1-7378-46b3-8f0c-56cfdbb8f3eb', 220, '::1', '2025-01-24 07:13:49.214', '2024-07-30 02:35:25.835', '2025-01-24 07:14:21.494');
 
 -- ----------------------------
 -- Indexes structure for table User

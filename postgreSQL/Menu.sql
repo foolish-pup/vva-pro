@@ -1,18 +1,18 @@
 /*
- Navicat Premium Dump SQL
+ Navicat Premium Data Transfer
 
- Source Server         : postgreSQL
+ Source Server         : postgres
  Source Server Type    : PostgreSQL
- Source Server Version : 160003 (160003)
+ Source Server Version : 170002
  Source Host           : localhost:5432
- Source Catalog        : vva-pro
+ Source Catalog        : vva-api
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 160003 (160003)
+ Target Server Version : 170002
  File Encoding         : 65001
 
- Date: 31/10/2024 10:17:01
+ Date: 24/01/2025 16:15:28
 */
 
 
@@ -28,12 +28,12 @@ CREATE TABLE "public"."Menu" (
   "name" text COLLATE "pg_catalog"."default",
   "path" text COLLATE "pg_catalog"."default",
   "component" text COLLATE "pg_catalog"."default",
-  "meta" jsonb,
+  "meta" "pg_catalog"."jsonb",
   "sort" int4 NOT NULL,
   "permission" text COLLATE "pg_catalog"."default",
   "createdAt" timestamp(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   "updatedAt" timestamp(3) NOT NULL,
-  "props" jsonb
+  "props" "pg_catalog"."jsonb"
 )
 ;
 

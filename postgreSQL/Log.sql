@@ -1,18 +1,18 @@
 /*
- Navicat Premium Dump SQL
+ Navicat Premium Data Transfer
 
- Source Server         : postgreSQL
+ Source Server         : postgres
  Source Server Type    : PostgreSQL
- Source Server Version : 160003 (160003)
+ Source Server Version : 170002
  Source Host           : localhost:5432
- Source Catalog        : vva-pro
+ Source Catalog        : vva-api
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 160003 (160003)
+ Target Server Version : 170002
  File Encoding         : 65001
 
- Date: 31/10/2024 10:16:54
+ Date: 24/01/2025 16:15:21
 */
 
 
@@ -26,7 +26,7 @@ CREATE TABLE "public"."Log" (
   "ip" text COLLATE "pg_catalog"."default" NOT NULL,
   "action" text COLLATE "pg_catalog"."default" NOT NULL,
   "method" "public"."Method" NOT NULL,
-  "params" jsonb NOT NULL,
+  "params" "pg_catalog"."jsonb" NOT NULL,
   "os" text COLLATE "pg_catalog"."default" NOT NULL,
   "browser" text COLLATE "pg_catalog"."default" NOT NULL,
   "province" text COLLATE "pg_catalog"."default",
@@ -39,9 +39,8 @@ CREATE TABLE "public"."Log" (
 -- ----------------------------
 -- Records of Log
 -- ----------------------------
-INSERT INTO "public"."Log" VALUES ('6725fc4f-bfb1-4323-8a16-133ed81d127f', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/login', 'POST', '{"password": "abc123456", "userName": "Admin", "captchaCode": "9"}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2024-10-31 02:12:24.756');
-INSERT INTO "public"."Log" VALUES ('fd6d4070-a1a8-4fd9-bd37-e0d5ddd5f55f', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/juejin', 'POST', '{"cursor": "0", "user_id": "1917147257534279", "sort_type": 2}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2024-10-31 02:12:26.049');
-INSERT INTO "public"."Log" VALUES ('c957011b-4984-4448-8a71-9ba2f440a512', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/system/internalization', 'POST', '{"enUS": "Home city", "jaJP": "所在する都市です", "name": "city", "zhCN": "所在城市", "zhTW": "所在城市", "parentId": "3f05721e-70cd-4f93-bc94-f6f2951d935f"}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2024-10-31 02:13:37.335');
+INSERT INTO "public"."Log" VALUES ('89e10225-184b-4391-a536-b5076211cfdd', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/login', 'POST', '{"password": "abc123456", "userName": "Admin", "captchaCode": "14"}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2025-01-24 07:03:52.652');
+INSERT INTO "public"."Log" VALUES ('28a74ef7-ceb6-4ed4-9efc-bad2dc020e97', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/juejin', 'POST', '{"cursor": "0", "user_id": "2098345026782328", "sort_type": 2}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2025-01-24 07:03:54.684');
 
 -- ----------------------------
 -- Primary Key structure for table Log

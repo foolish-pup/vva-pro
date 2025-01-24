@@ -1,18 +1,18 @@
 /*
- Navicat Premium Dump SQL
+ Navicat Premium Data Transfer
 
- Source Server         : postgreSQL
+ Source Server         : postgres
  Source Server Type    : PostgreSQL
- Source Server Version : 160003 (160003)
+ Source Server Version : 170002
  Source Host           : localhost:5432
- Source Catalog        : vva-pro
+ Source Catalog        : vva-api
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 160003 (160003)
+ Target Server Version : 170002
  File Encoding         : 65001
 
- Date: 31/10/2024 10:16:19
+ Date: 24/01/2025 16:14:26
 */
 
 
@@ -521,7 +521,7 @@ CREATE TABLE "public"."Log" (
   "ip" text COLLATE "pg_catalog"."default" NOT NULL,
   "action" text COLLATE "pg_catalog"."default" NOT NULL,
   "method" "public"."Method" NOT NULL,
-  "params" jsonb NOT NULL,
+  "params" "pg_catalog"."jsonb" NOT NULL,
   "os" text COLLATE "pg_catalog"."default" NOT NULL,
   "browser" text COLLATE "pg_catalog"."default" NOT NULL,
   "province" text COLLATE "pg_catalog"."default",
@@ -534,9 +534,8 @@ CREATE TABLE "public"."Log" (
 -- ----------------------------
 -- Records of Log
 -- ----------------------------
-INSERT INTO "public"."Log" VALUES ('6725fc4f-bfb1-4323-8a16-133ed81d127f', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/login', 'POST', '{"password": "abc123456", "userName": "Admin", "captchaCode": "9"}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2024-10-31 02:12:24.756');
-INSERT INTO "public"."Log" VALUES ('fd6d4070-a1a8-4fd9-bd37-e0d5ddd5f55f', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/juejin', 'POST', '{"cursor": "0", "user_id": "1917147257534279", "sort_type": 2}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2024-10-31 02:12:26.049');
-INSERT INTO "public"."Log" VALUES ('c957011b-4984-4448-8a71-9ba2f440a512', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/system/internalization', 'POST', '{"enUS": "Home city", "jaJP": "所在する都市です", "name": "city", "zhCN": "所在城市", "zhTW": "所在城市", "parentId": "3f05721e-70cd-4f93-bc94-f6f2951d935f"}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2024-10-31 02:13:37.335');
+INSERT INTO "public"."Log" VALUES ('89e10225-184b-4391-a536-b5076211cfdd', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/login', 'POST', '{"password": "abc123456", "userName": "Admin", "captchaCode": "14"}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2025-01-24 07:03:52.652');
+INSERT INTO "public"."Log" VALUES ('28a74ef7-ceb6-4ed4-9efc-bad2dc020e97', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '::1', '/auth/juejin', 'POST', '{"cursor": "0", "user_id": "2098345026782328", "sort_type": 2}', 'Windows 10', 'Chrome', NULL, NULL, NULL, '2025-01-24 07:03:54.684');
 
 -- ----------------------------
 -- Table structure for Menu
@@ -550,12 +549,12 @@ CREATE TABLE "public"."Menu" (
   "name" text COLLATE "pg_catalog"."default",
   "path" text COLLATE "pg_catalog"."default",
   "component" text COLLATE "pg_catalog"."default",
-  "meta" jsonb,
+  "meta" "pg_catalog"."jsonb",
   "sort" int4 NOT NULL,
   "permission" text COLLATE "pg_catalog"."default",
   "createdAt" timestamp(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   "updatedAt" timestamp(3) NOT NULL,
-  "props" jsonb
+  "props" "pg_catalog"."jsonb"
 )
 ;
 
@@ -682,23 +681,16 @@ CREATE TABLE "public"."MessageRead" (
 -- ----------------------------
 -- Records of MessageRead
 -- ----------------------------
-INSERT INTO "public"."MessageRead" VALUES ('e894e6bf-3dd2-45bf-b736-e66169d83add', 'b64c3c94-5312-45f2-aa8f-fca11a04263a', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-04 02:15:57.743');
 INSERT INTO "public"."MessageRead" VALUES ('c218f953-87f2-4cc9-a552-e80a64b2ebfa', '2215f10b-ca4f-4a73-b78b-a14a6ae4d52f', 'ea35984a-34f6-4da3-9f50-314f4b719ea6', '2024-09-04 05:53:47.778');
 INSERT INTO "public"."MessageRead" VALUES ('472116d6-5059-4201-9d09-420d17b3f49f', 'e9016a44-3ef8-4cac-8dcd-881a74559fba', 'ea35984a-34f6-4da3-9f50-314f4b719ea6', '2024-09-04 05:54:33.608');
 INSERT INTO "public"."MessageRead" VALUES ('705a6c64-eee9-4e3c-b867-b4fbfb87d854', 'e9016a44-3ef8-4cac-8dcd-881a74559fba', 'b485e3c1-0790-4007-adef-849537c291f5', '2024-09-04 05:56:20.796');
 INSERT INTO "public"."MessageRead" VALUES ('e762f6f0-8f3c-4769-8505-21b9772e0989', 'e9016a44-3ef8-4cac-8dcd-881a74559fba', 'bf9c32dc-2363-4a31-9e7f-74544f7d04a4', '2024-09-04 06:05:15.354');
 INSERT INTO "public"."MessageRead" VALUES ('dafa0711-0e2f-480c-957a-ad2bebc03a80', 'e9016a44-3ef8-4cac-8dcd-881a74559fba', 'c698c8e8-3aa0-4dec-b1cd-7d37660d1519', '2024-09-04 06:13:22.907');
-INSERT INTO "public"."MessageRead" VALUES ('b60e0224-750c-442e-9a2d-5b6184b74b28', '3ee060d0-7975-4cd5-bb7d-4f884d7824ba', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-04 06:15:40.04');
 INSERT INTO "public"."MessageRead" VALUES ('4f3d2cd5-0b90-4871-bc29-b634494fdb2e', '3ee060d0-7975-4cd5-bb7d-4f884d7824ba', 'c698c8e8-3aa0-4dec-b1cd-7d37660d1519', '2024-09-04 06:16:08.858');
 INSERT INTO "public"."MessageRead" VALUES ('3e5ca7b4-f6bc-4fc1-a33d-96a9ba76fb4c', '2215f10b-ca4f-4a73-b78b-a14a6ae4d52f', 'ba54e74c-86cb-4bfa-a0bc-71813175de9e', '2024-09-04 06:27:34.042');
-INSERT INTO "public"."MessageRead" VALUES ('68e203e5-4902-4aaa-a56e-2434619df84e', 'e9016a44-3ef8-4cac-8dcd-881a74559fba', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-04 06:29:25.511');
-INSERT INTO "public"."MessageRead" VALUES ('34b59c85-bc50-4e36-8e77-50505bf720d8', '2215f10b-ca4f-4a73-b78b-a14a6ae4d52f', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-04 06:32:27.602');
 INSERT INTO "public"."MessageRead" VALUES ('239e152f-eb37-4e8b-a1e1-fb216b57c6af', '2215f10b-ca4f-4a73-b78b-a14a6ae4d52f', 'b485e3c1-0790-4007-adef-849537c291f5', '2024-09-04 06:49:39.364');
 INSERT INTO "public"."MessageRead" VALUES ('e9927102-4ead-4994-88e6-9627f06fe894', '2215f10b-ca4f-4a73-b78b-a14a6ae4d52f', 'b62c0c5a-ac9f-4d7d-863c-fbfa148bbc4c', '2024-09-04 06:49:59.016');
 INSERT INTO "public"."MessageRead" VALUES ('1494516c-5193-4e4f-9f0e-c60493054581', '2215f10b-ca4f-4a73-b78b-a14a6ae4d52f', 'bf9c32dc-2363-4a31-9e7f-74544f7d04a4', '2024-09-04 06:50:13.943');
-INSERT INTO "public"."MessageRead" VALUES ('9a1c750a-2a15-498e-b4c4-a486f7258ae0', '49c29eb9-887d-4aad-a77b-4a72b81fcfd5', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-06 10:15:28.634');
-INSERT INTO "public"."MessageRead" VALUES ('290f44b4-c702-4ac0-9f90-a3865cfba9a3', '805818b4-683b-41b7-a301-7843a1455776', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-06 10:16:00.541');
-INSERT INTO "public"."MessageRead" VALUES ('c605621b-dc23-4471-926b-e016f29e33b1', '1ed975b1-3b92-4496-955c-883c6f8521bf', 'dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', '2024-09-06 10:17:00.587');
 INSERT INTO "public"."MessageRead" VALUES ('c88b2664-e589-46bb-a3d5-0bf40561210a', '70412167-ef80-49a3-b764-8b08841fcbeb', 'bf9c32dc-2363-4a31-9e7f-74544f7d04a4', '2024-09-06 10:25:48.045');
 
 -- ----------------------------
@@ -1019,7 +1011,7 @@ INSERT INTO "public"."User" VALUES ('ea35984a-34f6-4da3-9f50-314f4b719ea6', 'may
 INSERT INTO "public"."User" VALUES ('b485e3c1-0790-4007-adef-849537c291f5', 'leijun', '$2b$10$7Ywy/tKMzLmiWUEuXD4wG.Otq9VycEJcPtcGOEcKlt28jbo2k4.pO', '雷军', 'leijun@xiaomi.com', '18888888883', 'http://localhost:3000/static/image/2024-09/fcdab14e-29d4-43e3-8630-9cf064646f35.jpeg', 'MALE', 'ACTIVE', 1, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxlaWp1biIsInN1YiI6ImI0ODVlM2MxLTA3OTAtNDAwNy1hZGVmLTg0OTUzN2MyOTFmNSIsImlhdCI6MTcyNTk1OTE0MiwiZXhwIjoxNzI2MjE4MzQyfQ.r8wqW1bGycJ2FrNdu8rdbOmsw6PWPkBkdexvpzPkH7w', '{"Are You OK",小米SU7}', '{11,1101,110105}', '小米总部', '6db049fe-c944-4680-b6dc-f9f40d6ad018', '68c4ac85-3f4a-4ca0-9112-562e91a1d6a2', '42fa3681-de70-4d5f-95b8-db5a66101ecc', 5, '::1', '2024-09-10 09:05:42.137', '2024-09-04 05:44:44.16', '2024-09-10 09:05:42.138');
 INSERT INTO "public"."User" VALUES ('1785737b-8daf-4bc1-ae49-8769c256c209', 'lizhien', '$2b$10$HZUnnFSlz5E3N.DkLBQWu.AeyAOTvAayS6C.6osxcCTjYSm6zPt.6', '李知恩', 'lizhien@me.com', '13800138000', 'http://localhost:3000/static/image/2024-07/6f6e22a3-1e6a-4aa3-bbe9-6b2b0e6ea5aa.jpeg', 'FEMALE', 'INACTIVE', 1, NULL, '{美女}', '{11,1101,110101}', '首尔区', '2564f9b6-9288-49d4-b1b2-2d6f4f7946f3', '2eaab2c3-4872-49af-b647-78ba9c120df8', 'f401a468-5a9f-4430-85a2-d31177df034a', 2, '::1', '2024-08-23 03:36:37.955', '2024-07-30 06:38:44.512', '2024-08-23 03:36:54.871');
 INSERT INTO "public"."User" VALUES ('bf9c32dc-2363-4a31-9e7f-74544f7d04a4', 'zhangruonan', '$2b$10$LH1qhhLPxCIXMETxYqHDtek05qUAtMP9fQvZf6xJ23dPtG5JHx50G', '章若楠', 'zyn@yule.com', '18888888884', 'http://localhost:3000/static/image/2024-09/72840555-ee20-4679-a54d-4b39c622567d.jpeg', 'FEMALE', 'ACTIVE', 1, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InpoYW5ncnVvbmFuIiwic3ViIjoiYmY5YzMyZGMtMjM2My00YTMxLTllN2YtNzQ1NDRmN2QwNGE0IiwiaWF0IjoxNzI1OTU4MTQwLCJleHAiOjE3MjYyMTczNDB9.v2COO1RKNHMkNAyJ-nH5OyoooIN8JCcvXXmBeSN5kbI', '{女神}', '{13,1303,130303}', '别墅967号', 'e02b5eec-d7b9-4ff8-862c-0151448a390c', 'b924df00-77ed-49b7-a8b4-181f0b259c18', 'f401a468-5a9f-4430-85a2-d31177df034a', 9, '::1', '2024-09-10 08:49:00.671', '2024-09-04 05:46:47.509', '2024-09-10 08:49:00.674');
-INSERT INTO "public"."User" VALUES ('dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', 'Admin', '$2b$10$lfMvyYSrWNjVF55UhxeC0uoVYgf7GwWBhXu1BZAlvHXoGf./E7Lk2', 'pup', 'pup@foxmail.com', '15920157932', 'http://localhost:3000/static/image/2024-07/cc9e77ee-cf84-48e8-a9d0-dc3e9d21224c.jpeg', 'MALE', 'ACTIVE', 88, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFkbWluIiwic3ViIjoiZGRkZDdiYTktYzFkNC00YTZiLWI5NDYtZjA1ZTJmNzk4ODBmIiwiaWF0IjoxNzMwMzQwNzQ0LCJleHAiOjE3MzA1OTk5NDR9.T9cdDxVEBGYKs25z68DQZ5cUGTWoKuqkII9Dpau0-k8', '{热血青年,佛系,追求自由,做自己喜欢做的事}', '{44,4403,440305}', '粤海街道', '6db049fe-c944-4680-b6dc-f9f40d6ad018', '32cab8f0-13df-4876-83c5-86089390dbb7', '34f2d5e1-7378-46b3-8f0c-56cfdbb8f3eb', 216, '::1', '2024-10-31 02:12:24.833', '2024-07-30 02:35:25.835', '2024-10-31 02:12:24.835');
+INSERT INTO "public"."User" VALUES ('dddd7ba9-c1d4-4a6b-b946-f05e2f79880f', 'Admin', '$2b$10$lfMvyYSrWNjVF55UhxeC0uoVYgf7GwWBhXu1BZAlvHXoGf./E7Lk2', '狗子', 'superpupz@163.com', '18819990508', 'http://localhost:3000/static/image/2025-01/6353634b-1794-4a4d-a1c8-f23f0296741c.png', 'MALE', 'ACTIVE', 88, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFkbWluIiwic3ViIjoiZGRkZDdiYTktYzFkNC00YTZiLWI5NDYtZjA1ZTJmNzk4ODBmIiwiaWF0IjoxNzM3NzAyODI5LCJleHAiOjE3Mzc5NjIwMjl9.j82_exyD5SblXDuUsBagvx3RmLlhW2_j38ZGaol9EQg', '{热血青年,佛系,追求自由,做自己喜欢做的事}', '{11,1101,110105}', '望京', '6db049fe-c944-4680-b6dc-f9f40d6ad018', '32cab8f0-13df-4876-83c5-86089390dbb7', '34f2d5e1-7378-46b3-8f0c-56cfdbb8f3eb', 220, '::1', '2025-01-24 07:13:49.214', '2024-07-30 02:35:25.835', '2025-01-24 07:14:21.494');
 
 -- ----------------------------
 -- Table structure for _prisma_migrations

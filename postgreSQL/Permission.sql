@@ -1,18 +1,18 @@
 /*
- Navicat Premium Dump SQL
+ Navicat Premium Data Transfer
 
- Source Server         : postgreSQL
+ Source Server         : postgres
  Source Server Type    : PostgreSQL
- Source Server Version : 160003 (160003)
+ Source Server Version : 170002
  Source Host           : localhost:5432
- Source Catalog        : vva-pro
+ Source Catalog        : vva-api
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 160003 (160003)
+ Target Server Version : 170002
  File Encoding         : 65001
 
- Date: 31/10/2024 10:17:18
+ Date: 24/01/2025 16:15:57
 */
 
 
